@@ -3,7 +3,6 @@ Feature: Worker enters activity time
   As a worker
   I want to record activities worked on over spans of time
 
-  @wip
   Scenario: View this week's time entry grid
     When Access the time entry feature
     Then I see the time entry grid for this week
