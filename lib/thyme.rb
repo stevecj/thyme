@@ -16,10 +16,10 @@ class Thyme
     (monday..sunday)
   end
 
-  def access_activity_time_entry(controller)
-    response = dates_in_week_of(today).map{|date|
+  def show_activity_time_console(renderer)
+    data = dates_in_week_of(today).map{|date|
       { :date => date, :entries => [] }
     }
-    controller.show_activity_time_entry response
+    renderer.call data
   end
 end
