@@ -1,4 +1,10 @@
 class ThymeDomainDriver
+  def initialize(cuke_env)
+  end
+
+  def teardown
+  end
+
   def access_activity_time_console
     app.show_activity_time_console method(:render_activity_time_console)
   end
