@@ -1,4 +1,4 @@
-When /^Access the time entry feature$/ do
+When /^I access the time entry console$/ do
   driver.access_activity_time_console
 end
 

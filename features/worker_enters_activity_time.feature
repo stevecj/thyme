@@ -4,5 +4,5 @@ Feature: Worker enters activity time
   I want to record activities worked on over spans of time
 
   Scenario: View this week's time entry grid
-    When Access the time entry feature
+    When I access the time entry console
     Then I see the time entry grid for this week
