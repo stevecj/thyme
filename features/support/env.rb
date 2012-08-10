@@ -6,7 +6,7 @@ def driver
 end
 
 After do
-  return unless @driver ||= nil
+  next unless @driver ||= nil
   @driver.teardown
   @driver = nil
 end
