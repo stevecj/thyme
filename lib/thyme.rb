@@ -1,15 +1,29 @@
 require 'date'
 
 class Thyme
-  def initialize(options = {})
+  class Director
+  end
+
+  def initialize(persistence, options = {})
     @options = options
+    @persistence = persistence
+    @director = Director.new
+  end
+
+  def director
+    @director
   end
 
   def show_activity_time_console(renderer)
     data = dates_in_week_of(today).map{|date|
-      { :date => date, :entries => [] }
+      { :date => date, :entries => @persistence.activity_time_entries_on(date) }
     }
     renderer.call data
+  end
+
+  def submit_activity_time_span(data)
+    @persistence.add_activity_time_span data
+    director.show_time_entry_console
   end
 
   private

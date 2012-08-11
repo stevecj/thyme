@@ -11,6 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20120811010840) do
+
+  create_table "activity_time_spans", :force => true do |t|
+    t.date   "on_date",   :null => false
+    t.time   "from_time", :null => false
+    t.time   "to_time",   :null => false
+    t.string "activity",  :null => false
+  end
 
 end

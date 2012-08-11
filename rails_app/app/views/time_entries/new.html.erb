@@ -1,0 +1,7 @@
+<%= form_for :activity_time_span, :url=>time_entries_path, :html=>{:class=>'new_activity_time_span_form'} do |f| %>
+  <%= hidden_field_tag 'activity_time_span[on_date]', @on_date %>
+  <input class='from_time' id='activity_time_span_from_time', name='activity_time_span[from_time]'>
+  <input class='to_time'   id='activity_time_span_to_time',   name='activity_time_span[to_time]'  >
+  <input class='activity'  id='activity_time_span_activity',  name='activity_time_span[activity]' >
+  <input type='submit'>
+<% end %>
